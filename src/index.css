@@ -1,0 +1,110 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.quoteContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 100vh;
+  background-color: hsla(269, 3%, 9%, 1);
+  background-image: radial-gradient(at 71% 11%, hsla(239, 70%, 21%, 0.53) 0px, transparent 50%), radial-gradient(at 40% 81%, hsla(328, 60%, 14%, 0.64) 0px, transparent 50%);
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+}
+
+.quote {
+  position: relative;
+  max-width: 450px;
+  width: 100%;
+  padding: 2.25rem 2.75rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0px 50px;
+  backdrop-filter: blur(6px);
+  text-align: center;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #f9fafb;
+  margin-bottom: 1.5rem;
+}
+
+.text {
+  color: #d4d4d4;
+  opacity: 0.9;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.author {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: whitesmoke;
+}
+
+.newQuoteButton {
+  font-family: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 1.5rem auto 0.4rem auto;
+  padding: 0.625rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #d4d4d4;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newQuoteButton:hover {
+  color: #f9fafb;
+  background-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 0 10px 6px rgba(255, 255, 255, 0.03);
+}
+
+.newQuoteButtonDisabled {
+  color: #d4d4d4;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: auto;
+  box-shadow: none;
+
+  font-family: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 1.5rem auto 0.4rem auto;
+  padding: 0.625rem;
+
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.spinner {
+  border: 8px solid rgba(255, 255, 255, 0.1);
+  border-top: 8px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
